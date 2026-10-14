@@ -2,7 +2,7 @@
   "name": "recent-folders",
   "displayName": "Recent Folders",
   "description": "快速访问最近打开的文件夹 / Quick access to recent folders",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "zezechen",
   "repository": "https://github.com/zezechen/recent-folders",
   "icon": "icon.png",
@@ -10,6 +10,9 @@
     "vscode": "^1.80.0"
   },
   "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "configuration": {
       "title": "Recent Folders",

@@ -31,6 +31,10 @@ const provider = {
 };
 
 function activate(ctx) {
+    if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
+        vscode.commands.executeCommand('workbench.view.explorer');
+    }
+
     ctx.subscriptions.push(
         vscode.window.createTreeView('recentFoldersView', { treeDataProvider: provider }),
         vscode.commands.registerCommand('recentFoldersView.refresh', () => provider.refresh()),
